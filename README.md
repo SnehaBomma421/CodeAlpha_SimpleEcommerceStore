@@ -2,6 +2,8 @@
 
 A production-quality e-commerce website built with Node.js, Express, MongoDB, and vanilla JavaScript.
 
+LIVE DEMO: https://codealpha-simpleecommerce.onrender.com/ 
+
 ## ✨ Features
 
 ### User Features
