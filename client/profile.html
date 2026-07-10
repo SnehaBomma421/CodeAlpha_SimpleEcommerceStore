@@ -1,0 +1,117 @@
+<!DOCTYPE html>
+<html lang="en" data-theme="light">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>My Account - ShopVerse</title>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+  <link rel="stylesheet" href="css/style.css">
+  <link rel="shortcut icon" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><text y='.9em' font-size='90'>🛒</text></svg>" type="image/x-icon">
+</head>
+<body>
+  <nav class="navbar" id="navbar">
+    <div class="container">
+      <a href="/" class="navbar-brand"><span class="brand-icon">🛒</span> ShopVerse</a>
+      <div class="navbar-search">
+        <i class="fas fa-search search-icon"></i>
+        <input type="text" id="searchInput" placeholder="Search products..." autocomplete="off">
+        <div class="search-suggestions" id="searchSuggestions"></div>
+      </div>
+      <button class="mobile-menu-btn" id="mobileMenuBtn" aria-label="Toggle menu"><i class="fas fa-bars"></i></button>
+      <div class="navbar-links" id="navbarLinks">
+        <a href="/" class="nav-link"><i class="fas fa-home"></i> <span>Home</span></a>
+        <a href="/products" class="nav-link"><i class="fas fa-store"></i> <span>Products</span></a>
+        <a href="/cart" class="nav-link"><i class="fas fa-shopping-cart"></i> <span>Cart</span><span class="cart-count" id="cartCountNav">0</span></a>
+        <a href="/login" class="nav-link" id="authLink"><i class="fas fa-user"></i> <span>Login</span></a>
+        <button class="theme-toggle" id="themeToggle" aria-label="Toggle theme"><i class="fas fa-moon"></i></button>
+      </div>
+    </div>
+  </nav>
+
+  <div class="profile-page">
+    <div class="container">
+      <div class="breadcrumb">
+        <a href="/">Home</a>
+        <span class="separator">›</span>
+        <span>My Account</span>
+      </div>
+
+      <div id="profileContent">
+        <div class="profile-grid">
+          <aside class="profile-sidebar">
+            <div class="profile-avatar" id="profileAvatar">👤</div>
+            <h3 id="profileName">User</h3>
+            <p class="profile-email" id="profileEmail">user@email.com</p>
+            <div class="profile-nav">
+              <button class="active" data-tab="orders"><i class="fas fa-shopping-bag"></i> My Orders</button>
+              <button data-tab="details"><i class="fas fa-user-cog"></i> Account Details</button>
+              <button id="logoutBtn"><i class="fas fa-sign-out-alt"></i> Logout</button>
+            </div>
+          </aside>
+
+          <div class="profile-content">
+            <div id="ordersTab">
+              <h2><i class="fas fa-shopping-bag"></i> My Orders</h2>
+              <div id="ordersList">
+                <div class="loading-spinner" style="min-height:200px;"><div class="spinner"></div></div>
+              </div>
+            </div>
+
+            <div id="detailsTab" style="display:none;">
+              <h2><i class="fas fa-user-cog"></i> Account Details</h2>
+              <div class="form-group">
+                <label>Name</label>
+                <p id="detailName" style="font-weight:600;"></p>
+              </div>
+              <div class="form-group">
+                <label>Email</label>
+                <p id="detailEmail" style="font-weight:600;"></p>
+              </div>
+              <div class="form-group">
+                <label>Member Since</label>
+                <p id="detailJoined" style="font-weight:600;"></p>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <div id="loginPrompt" style="display:none;text-align:center;padding:80px 20px;">
+        <div style="font-size:4rem;margin-bottom:20px;opacity:0.3;">🔒</div>
+        <h2>Please Login</h2>
+        <p style="color:var(--text-muted);margin-bottom:20px;">You need to be logged in to view your profile.</p>
+        <a href="/login" class="btn btn-primary"><i class="fas fa-sign-in-alt"></i> Login</a>
+      </div>
+    </div>
+  </div>
+
+  <footer class="footer">
+    <div class="container">
+      <div class="footer-content">
+        <div class="footer-section">
+          <h3><span>🛒 ShopVerse</span></h3>
+          <p>Your premium destination for online shopping.</p>
+        </div>
+        <div class="footer-section">
+          <h3>Quick Links</h3>
+          <ul>
+            <li><a href="/">Home</a></li>
+            <li><a href="/products">Products</a></li>
+            <li><a href="/cart">Cart</a></li>
+          </ul>
+        </div>
+      </div>
+      <div class="footer-bottom">
+        <p>&copy; 2024 ShopVerse. All rights reserved.</p>
+      </div>
+    </div>
+  </footer>
+
+  <div class="toast-container" id="toastContainer"></div>
+
+  <script src="js/api.js"></script>
+  <script src="js/cart.js"></script>
+  <script src="js/auth.js"></script>
+  <script src="js/app.js"></script>
+</body>
+</html>

@@ -1,0 +1,187 @@
+<!DOCTYPE html>
+<html lang="en" data-theme="light">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="Shop the latest products at amazing prices. Premium e-commerce store with fast delivery.">
+  <title>ShopVerse - Premium E-Commerce Store</title>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+  <link rel="stylesheet" href="css/style.css">
+  <link rel="shortcut icon" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><text y='.9em' font-size='90'>🛒</text></svg>" type="image/x-icon">
+</head>
+<body>
+  <!-- ===== NAVBAR ===== -->
+  <nav class="navbar" id="navbar">
+    <div class="container">
+      <a href="/" class="navbar-brand">
+        <span class="brand-icon">🛒</span>
+        ShopVerse
+      </a>
+
+      <div class="navbar-search">
+        <i class="fas fa-search search-icon"></i>
+        <input type="text" id="searchInput" placeholder="Search products..." autocomplete="off">
+        <div class="search-suggestions" id="searchSuggestions"></div>
+      </div>
+
+      <button class="mobile-menu-btn" id="mobileMenuBtn" aria-label="Toggle menu">
+        <i class="fas fa-bars"></i>
+      </button>
+
+      <div class="navbar-links" id="navbarLinks">
+        <a href="/" class="nav-link"><i class="fas fa-home"></i> <span>Home</span></a>
+        <a href="/products" class="nav-link"><i class="fas fa-store"></i> <span>Products</span></a>
+        <a href="/cart" class="nav-link">
+          <i class="fas fa-shopping-cart"></i> <span>Cart</span>
+          <span class="cart-count" id="cartCountNav">0</span>
+        </a>
+        <a href="/wishlist" class="nav-link"><i class="fas fa-heart"></i> <span>Wishlist</span></a>
+        <a href="/login" class="nav-link" id="authLink"><i class="fas fa-user"></i> <span>Login</span></a>
+        <button class="theme-toggle" id="themeToggle" aria-label="Toggle theme">
+          <i class="fas fa-moon"></i>
+        </button>
+      </div>
+    </div>
+  </nav>
+
+  <!-- ===== HERO SECTION ===== -->
+  <section class="hero" id="hero">
+    <div class="container">
+      <div class="hero-content">
+        <h1>Discover <span>Premium</span> Products for Every Need</h1>
+        <p>Shop the latest trends with exclusive deals, fast delivery, and unbeatable prices. Your perfect find is just a click away.</p>
+        <div class="hero-buttons">
+          <a href="/products" class="btn btn-primary">
+            <i class="fas fa-shopping-bag"></i> Shop Now
+          </a>
+          <a href="#featured" class="btn btn-secondary">
+            <i class="fas fa-fire"></i> Featured Products
+          </a>
+        </div>
+        <div class="hero-stats">
+          <div class="hero-stat">
+            <h3 id="totalProducts">0+</h3>
+            <p>Products</p>
+          </div>
+          <div class="hero-stat">
+            <h3>5000+</h3>
+            <p>Happy Customers</p>
+          </div>
+          <div class="hero-stat">
+            <h3>7-Day</h3>
+            <p>Free Returns</p>
+          </div>
+        </div>
+      </div>
+      <div class="hero-image">
+        <img src="https://cdni.iconscout.com/illustration/premium/thumb/online-shopping-5696314-4754387.png" alt="Online Shopping" loading="lazy">
+      </div>
+    </div>
+  </section>
+
+  <!-- ===== CATEGORIES SECTION ===== -->
+  <section class="categories" id="categories">
+    <div class="container">
+      <div class="section-header">
+        <h2>Shop by <span>Category</span></h2>
+        <div class="section-divider"></div>
+        <p>Browse our wide selection of categories</p>
+      </div>
+      <div class="categories-grid" id="categoriesGrid">
+        <!-- Categories loaded dynamically -->
+      </div>
+    </div>
+  </section>
+
+  <!-- ===== FEATURED PRODUCTS ===== -->
+  <section class="featured-products" id="featured">
+    <div class="container">
+      <div class="section-header">
+        <h2>Featured <span>Products</span></h2>
+        <div class="section-divider"></div>
+        <p>Handpicked products just for you</p>
+      </div>
+      <div class="products-grid" id="featuredProductsGrid">
+        <!-- Featured products loaded dynamically -->
+      </div>
+    </div>
+  </section>
+
+  <!-- ===== NEW ARRIVALS ===== -->
+  <section class="new-arrivals" id="newArrivals">
+    <div class="container">
+      <div class="section-header">
+        <h2>New <span>Arrivals</span></h2>
+        <div class="section-divider"></div>
+        <p>The latest products added to our store</p>
+      </div>
+      <div class="products-grid" id="newArrivalsGrid">
+        <!-- New arrivals loaded dynamically -->
+      </div>
+      <div style="text-align:center; margin-top:30px;">
+        <a href="/products" class="btn btn-outline">
+          <i class="fas fa-arrow-right"></i> View All Products
+        </a>
+      </div>
+    </div>
+  </section>
+
+  <!-- ===== FOOTER ===== -->
+  <footer class="footer">
+    <div class="container">
+      <div class="footer-content">
+        <div class="footer-section">
+          <h3><span>🛒 ShopVerse</span></h3>
+          <p>Your premium destination for online shopping. We offer the best products at unbeatable prices with fast delivery across the country.</p>
+          <div class="social-links">
+            <a href="#" aria-label="Facebook"><i class="fab fa-facebook-f"></i></a>
+            <a href="#" aria-label="Twitter"><i class="fab fa-twitter"></i></a>
+            <a href="#" aria-label="Instagram"><i class="fab fa-instagram"></i></a>
+            <a href="#" aria-label="YouTube"><i class="fab fa-youtube"></i></a>
+          </div>
+        </div>
+        <div class="footer-section">
+          <h3>Quick Links</h3>
+          <ul>
+            <li><a href="/">Home</a></li>
+            <li><a href="/products">Products</a></li>
+            <li><a href="/cart">Cart</a></li>
+            <li><a href="/login">My Account</a></li>
+          </ul>
+        </div>
+        <div class="footer-section">
+          <h3>Categories</h3>
+          <ul id="footerCategories">
+            <!-- Loaded dynamically -->
+          </ul>
+        </div>
+        <div class="footer-section">
+          <h3>Contact Info</h3>
+          <ul>
+            <li><i class="fas fa-envelope"></i> support@shopverse.com</li>
+            <li><i class="fas fa-phone"></i> +1 234 567 890</li>
+            <li><i class="fas fa-map-marker-alt"></i> 123 Shopping St, NY</li>
+          </ul>
+        </div>
+      </div>
+      <div class="footer-bottom">
+        <p>&copy; 2024 ShopVerse. All rights reserved. | Built with ❤️ for developers</p>
+      </div>
+    </div>
+  </footer>
+
+  <!-- ===== BACK TO TOP ===== -->
+  <button class="back-to-top" id="backToTop" aria-label="Back to top">
+    <i class="fas fa-arrow-up"></i>
+  </button>
+
+  <!-- ===== TOAST CONTAINER ===== -->
+  <div class="toast-container" id="toastContainer"></div>
+
+  <!-- ===== SCRIPTS ===== -->
+  <script src="js/api.js"></script>
+  <script src="js/cart.js"></script>
+  <script src="js/auth.js"></script>
+  <script src="js/app.js"></script>
+</body>
+</html>

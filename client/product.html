@@ -1,0 +1,140 @@
+<!DOCTYPE html>
+<html lang="en" data-theme="light">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Product Details - ShopVerse</title>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+  <link rel="stylesheet" href="css/style.css">
+  <link rel="shortcut icon" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><text y='.9em' font-size='90'>🛒</text></svg>" type="image/x-icon">
+</head>
+<body>
+  <nav class="navbar" id="navbar">
+    <div class="container">
+      <a href="/" class="navbar-brand"><span class="brand-icon">🛒</span> ShopVerse</a>
+      <div class="navbar-search">
+        <i class="fas fa-search search-icon"></i>
+        <input type="text" id="searchInput" placeholder="Search products..." autocomplete="off">
+        <div class="search-suggestions" id="searchSuggestions"></div>
+      </div>
+      <button class="mobile-menu-btn" id="mobileMenuBtn" aria-label="Toggle menu"><i class="fas fa-bars"></i></button>
+      <div class="navbar-links" id="navbarLinks">
+        <a href="/" class="nav-link"><i class="fas fa-home"></i> <span>Home</span></a>
+        <a href="/products" class="nav-link"><i class="fas fa-store"></i> <span>Products</span></a>
+        <a href="/cart" class="nav-link"><i class="fas fa-shopping-cart"></i> <span>Cart</span><span class="cart-count" id="cartCountNav">0</span></a>
+        <a href="/wishlist" class="nav-link"><i class="fas fa-heart"></i> <span>Wishlist</span></a>
+        <a href="/login" class="nav-link" id="authLink"><i class="fas fa-user"></i> <span>Login</span></a>
+        <button class="theme-toggle" id="themeToggle" aria-label="Toggle theme"><i class="fas fa-moon"></i></button>
+      </div>
+    </div>
+  </nav>
+
+  <div class="product-detail" id="productDetail">
+    <div class="container">
+      <div class="breadcrumb">
+        <a href="/">Home</a>
+        <span class="separator">›</span>
+        <a href="/products">Products</a>
+        <span class="separator">›</span>
+        <span id="breadcrumbProduct">Product</span>
+      </div>
+
+      <div class="loading-spinner" id="productLoading">
+        <div class="spinner"></div>
+      </div>
+
+      <div class="product-detail-grid" id="productContent" style="display:none;">
+        <div class="product-detail-image">
+          <img id="productImage" src="" alt="Product Image">
+        </div>
+
+        <div class="product-detail-info">
+          <h1 id="productTitle">Product Title</h1>
+
+          <div class="product-meta">
+            <span id="productCategory" style="color:var(--primary);font-weight:600;text-transform:uppercase;letter-spacing:1px;">Category</span>
+            <div class="rating">
+              <span class="stars" id="productStars">★★★★★</span>
+              <span id="productRatingText" style="color:var(--text-muted);font-size:0.9rem;">(0 reviews)</span>
+            </div>
+          </div>
+
+          <div class="price-section">
+            <span class="current-price" id="productPrice">₹0.00</span>
+          </div>
+
+          <p class="description" id="productDescription">Product description goes here.</p>
+
+          <div class="stock-info" id="stockInfo">
+            <i class="fas fa-check-circle"></i>
+            <span id="stockText">In Stock</span>
+          </div>
+
+          <div class="quantity-selector">
+            <label>Quantity:</label>
+            <div class="quantity-controls">
+              <button id="decreaseQty">−</button>
+              <input type="number" id="quantity" value="1" min="1" max="99">
+              <button id="increaseQty">+</button>
+            </div>
+          </div>
+
+          <div class="action-buttons">
+            <button class="btn btn-primary" id="addToCartBtn">
+              <i class="fas fa-shopping-cart"></i> Add to Cart
+            </button>
+            <button class="btn btn-secondary" id="buyNowBtn">
+              <i class="fas fa-bolt"></i> Buy Now
+            </button>
+            <button class="btn btn-outline" id="wishlistBtn">
+              <i class="fas fa-heart"></i>
+            </button>
+          </div>
+        </div>
+      </div>
+
+      <!-- Related Products -->
+      <div class="related-products">
+        <h2>Related Products</h2>
+        <div class="products-grid" id="relatedProductsGrid">
+          <!-- Related products loaded dynamically -->
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <footer class="footer">
+    <div class="container">
+      <div class="footer-content">
+        <div class="footer-section">
+          <h3><span>🛒 ShopVerse</span></h3>
+          <p>Your premium destination for online shopping.</p>
+          <div class="social-links">
+            <a href="#" aria-label="Facebook"><i class="fab fa-facebook-f"></i></a>
+            <a href="#" aria-label="Twitter"><i class="fab fa-twitter"></i></a>
+            <a href="#" aria-label="Instagram"><i class="fab fa-instagram"></i></a>
+          </div>
+        </div>
+        <div class="footer-section">
+          <h3>Quick Links</h3>
+          <ul>
+            <li><a href="/">Home</a></li>
+            <li><a href="/products">Products</a></li>
+            <li><a href="/cart">Cart</a></li>
+          </ul>
+        </div>
+      </div>
+      <div class="footer-bottom">
+        <p>&copy; 2024 ShopVerse. All rights reserved.</p>
+      </div>
+    </div>
+  </footer>
+
+  <div class="toast-container" id="toastContainer"></div>
+
+  <script src="js/api.js"></script>
+  <script src="js/cart.js"></script>
+  <script src="js/auth.js"></script>
+  <script src="js/app.js"></script>
+</body>
+</html>

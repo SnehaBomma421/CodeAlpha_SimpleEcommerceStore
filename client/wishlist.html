@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="en" data-theme="light">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>My Wishlist - ShopVerse</title>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+  <link rel="stylesheet" href="css/style.css">
+  <link rel="shortcut icon" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><text y='.9em' font-size='90'>🛒</text></svg>" type="image/x-icon">
+</head>
+<body>
+  <nav class="navbar" id="navbar">
+    <div class="container">
+      <a href="/" class="navbar-brand"><span class="brand-icon">🛒</span> ShopVerse</a>
+      <div class="navbar-search">
+        <i class="fas fa-search search-icon"></i>
+        <input type="text" id="searchInput" placeholder="Search products..." autocomplete="off">
+        <div class="search-suggestions" id="searchSuggestions"></div>
+      </div>
+      <button class="mobile-menu-btn" id="mobileMenuBtn" aria-label="Toggle menu"><i class="fas fa-bars"></i></button>
+      <div class="navbar-links" id="navbarLinks">
+        <a href="/" class="nav-link"><i class="fas fa-home"></i> <span>Home</span></a>
+        <a href="/products" class="nav-link"><i class="fas fa-store"></i> <span>Products</span></a>
+        <a href="/cart" class="nav-link"><i class="fas fa-shopping-cart"></i> <span>Cart</span><span class="cart-count" id="cartCountNav">0</span></a>
+        <a href="/login" class="nav-link" id="authLink"><i class="fas fa-user"></i> <span>Login</span></a>
+        <button class="theme-toggle" id="themeToggle" aria-label="Toggle theme"><i class="fas fa-moon"></i></button>
+      </div>
+    </div>
+  </nav>
+
+  <div class="wishlist-page">
+    <div class="container">
+      <div class="breadcrumb">
+        <a href="/">Home</a>
+        <span class="separator">›</span>
+        <span>Wishlist</span>
+      </div>
+
+      <h1 style="margin-bottom:30px;"><i class="fas fa-heart"></i> My Wishlist</h1>
+
+      <div class="products-grid" id="wishlistGrid">
+        <!-- Wishlist items loaded by JS -->
+      </div>
+
+      <div id="wishlistEmpty" style="display:none;text-align:center;padding:60px 20px;">
+        <div style="font-size:4rem;margin-bottom:20px;opacity:0.3;">💔</div>
+        <h2>Your wishlist is empty</h2>
+        <p style="color:var(--text-muted);margin-bottom:20px;">Save your favorite items here!</p>
+        <a href="/products" class="btn btn-primary"><i class="fas fa-store"></i> Browse Products</a>
+      </div>
+    </div>
+  </div>
+
+  <footer class="footer">
+    <div class="container">
+      <div class="footer-content">
+        <div class="footer-section">
+          <h3><span>🛒 ShopVerse</span></h3>
+          <p>Your premium destination for online shopping.</p>
+        </div>
+      </div>
+      <div class="footer-bottom">
+        <p>&copy; 2024 ShopVerse. All rights reserved.</p>
+      </div>
+    </div>
+  </footer>
+
+  <div class="toast-container" id="toastContainer"></div>
+
+  <script src="js/api.js"></script>
+  <script src="js/cart.js"></script>
+  <script src="js/auth.js"></script>
+  <script src="js/app.js"></script>
+</body>
+</html>
